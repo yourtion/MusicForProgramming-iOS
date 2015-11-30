@@ -14,6 +14,7 @@
 		CB297EBF1C09C6490048F08E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB297EBD1C09C6490048F08E /* LaunchScreen.storyboard */; };
 		CB297ECA1C09C85C0048F08E /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB297EC61C09C79A0048F08E /* SWXMLHash.framework */; };
 		CB297ECB1C09C85C0048F08E /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB297EC61C09C79A0048F08E /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB297ECE1C09E8450048F08E /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297ECD1C09E8450048F08E /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		CB297EBE1C09C6490048F08E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB297EC01C09C6490048F08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB297EC61C09C79A0048F08E /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
+		CB297ECD1C09E8450048F08E /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		CB297EB31C09C6490048F08E /* PMusic */ = {
 			isa = PBXGroup;
 			children = (
+				CBF0D86B1C0BFDF80098111C /* Model */,
 				CB297EB41C09C6490048F08E /* AppDelegate.swift */,
 				CB297EB61C09C6490048F08E /* ViewController.swift */,
 				CB297EB81C09C6490048F08E /* Main.storyboard */,
@@ -81,6 +84,14 @@
 				CB297EC01C09C6490048F08E /* Info.plist */,
 			);
 			path = PMusic;
+			sourceTree = "<group>";
+		};
+		CBF0D86B1C0BFDF80098111C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB297ECD1C09E8450048F08E /* Music.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			files = (
 				CB297EB71C09C6490048F08E /* ViewController.swift in Sources */,
 				CB297EB51C09C6490048F08E /* AppDelegate.swift in Sources */,
+				CB297ECE1C09E8450048F08E /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,7 @@
 				CB297EC51C09C6490048F08E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
