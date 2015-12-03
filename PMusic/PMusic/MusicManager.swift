@@ -15,19 +15,27 @@ class MusicManager: NSObject {
     private override init() {}
     
     private let RSS_URL = "http://musicforprogramming.net/rss.php"
+    private let MUSIC_KEY = "MusicList"
+    private let defaults = NSUserDefaults.standardUserDefaults()
     
-    func getList() {
+    
+    func getList(withCache:Bool = true,callback: (musicList: Array<Music>!) -> Void) {
+        let musicList = self.getCachedList()
+        if(musicList != nil && withCache){
+            return callback(musicList: musicList)
+        }
         NetworkKit.get(self.RSS_URL) { (data, response, error) -> Void in
             if data == nil {
                 print("dataTaskWithRequest error: \(error)")
-                return
+                return callback(musicList: [])
             }
-            self.parseXML(data)
-            
+            let list = self.parseXML(data)
+            self.cacheList(list)
+            callback(musicList: list)
         }
     }
     
-    func parseXML(data: NSData) {
+    func parseXML(data: NSData) -> Array<Music> {
         let xml = SWXMLHash.parse(data)
 //        print(xml["rss"]["channel"][0])
         let channel = xml["rss"]["channel"][0]
@@ -45,6 +53,20 @@ class MusicManager: NSObject {
             let music = Music.init(id: id, title: title, url: url)
             musicList.append(music)
         }
-        print(musicList)
+        return (musicList)
+    }
+    
+    func cacheList(list:Array<Music>) {
+        let obj = NSKeyedArchiver.archivedDataWithRootObject(list)
+        self.defaults.setObject(obj, forKey: self.MUSIC_KEY)
+        self.defaults.synchronize()
+    }
+    
+    func getCachedList() -> Array<Music>! {
+        let obj = self.defaults.objectForKey(self.MUSIC_KEY)
+        if (obj != nil){
+            return NSKeyedUnarchiver.unarchiveObjectWithData(obj as! NSData) as! Array<Music>
+        }
+        return nil
     }
 }
