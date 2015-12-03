@@ -15,6 +15,8 @@
 		CB297ECA1C09C85C0048F08E /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB297EC61C09C79A0048F08E /* SWXMLHash.framework */; };
 		CB297ECB1C09C85C0048F08E /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB297EC61C09C79A0048F08E /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB297ECE1C09E8450048F08E /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297ECD1C09E8450048F08E /* Music.swift */; };
+		CBBDCF641C101C4A0052AC9F /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDCF631C101C4A0052AC9F /* NetworkKit.swift */; };
+		CBBDCF671C101E040052AC9F /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDCF661C101E040052AC9F /* MusicManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,8 @@
 		CB297EC01C09C6490048F08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB297EC61C09C79A0048F08E /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
 		CB297ECD1C09E8450048F08E /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		CBBDCF631C101C4A0052AC9F /* NetworkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
+		CBBDCF661C101E040052AC9F /* MusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		CB297EB31C09C6490048F08E /* PMusic */ = {
 			isa = PBXGroup;
 			children = (
+				CBBDCF651C101C4F0052AC9F /* Network */,
 				CBF0D86B1C0BFDF80098111C /* Model */,
 				CB297EB41C09C6490048F08E /* AppDelegate.swift */,
 				CB297EB61C09C6490048F08E /* ViewController.swift */,
@@ -84,6 +89,15 @@
 				CB297EC01C09C6490048F08E /* Info.plist */,
 			);
 			path = PMusic;
+			sourceTree = "<group>";
+		};
+		CBBDCF651C101C4F0052AC9F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDCF631C101C4A0052AC9F /* NetworkKit.swift */,
+				CBBDCF661C101E040052AC9F /* MusicManager.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		CBF0D86B1C0BFDF80098111C /* Model */ = {
@@ -167,8 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB297EB71C09C6490048F08E /* ViewController.swift in Sources */,
+				CBBDCF641C101C4A0052AC9F /* NetworkKit.swift in Sources */,
 				CB297EB51C09C6490048F08E /* AppDelegate.swift in Sources */,
 				CB297ECE1C09E8450048F08E /* Music.swift in Sources */,
+				CBBDCF671C101E040052AC9F /* MusicManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
