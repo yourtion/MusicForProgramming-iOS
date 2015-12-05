@@ -14,7 +14,8 @@ class MusicManager: NSObject {
     static let sharedInstance = MusicManager()
     private override init() {}
     
-    private let RSS_URL = "http://musicforprogramming.net/rss.php"
+//    private let RSS_URL = "http://musicforprogramming.net/rss.php"
+    private let RSS_URL = "http://192.168.31.186:8080/rss.xml"
     private let MUSIC_KEY = "MusicList"
     private let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -57,9 +58,11 @@ class MusicManager: NSObject {
     }
     
     func cacheList(list:Array<Music>) {
-        let obj = NSKeyedArchiver.archivedDataWithRootObject(list)
-        self.defaults.setObject(obj, forKey: self.MUSIC_KEY)
-        self.defaults.synchronize()
+        if (list.count > 0) {
+            let obj = NSKeyedArchiver.archivedDataWithRootObject(list)
+            self.defaults.setObject(obj, forKey: self.MUSIC_KEY)
+            self.defaults.synchronize()
+        }
     }
     
     func getCachedList() -> Array<Music>! {
@@ -68,5 +71,19 @@ class MusicManager: NSObject {
             return NSKeyedUnarchiver.unarchiveObjectWithData(obj as! NSData) as! Array<Music>
         }
         return nil
+    }
+    
+    func downloadMusic(music: Music,
+        task: (written: String, total: String, progress: Float) -> Void,
+        finish: (file: NSURL!) -> Void) {
+        let down = DwonloadManager.init(url: music.url, file: music.path, taskCallback: { (written, totalBytes, progress) -> Void in
+            print(progress)
+            let finish = NSByteCountFormatter.stringFromByteCount(written, countStyle: .File)
+            let total = NSByteCountFormatter.stringFromByteCount(totalBytes, countStyle: .File)
+            task(written: finish, total: total, progress: progress)
+            }) { (url, file) -> Void in
+                finish(file: file)
+            }
+        down.fire()
     }
 }
