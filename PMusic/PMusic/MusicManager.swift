@@ -22,11 +22,11 @@ class MusicManager: NSObject {
     
     func getList(withCache:Bool = true,callback: (musicList: Array<Music>!) -> Void) {
         let musicList = self.getCachedList()
-        if(musicList != nil && withCache){
+        if (musicList != nil && withCache ) {
             return callback(musicList: musicList)
         }
         NetworkKit.get(self.RSS_URL) { (data, response, error) -> Void in
-            if data == nil {
+            guard let data = data else {
                 print("dataTaskWithRequest error: \(error)")
                 return callback(musicList: [])
             }
@@ -66,11 +66,10 @@ class MusicManager: NSObject {
     }
     
     func getCachedList() -> Array<Music>! {
-        let obj = self.defaults.objectForKey(self.MUSIC_KEY)
-        if (obj != nil){
-            return NSKeyedUnarchiver.unarchiveObjectWithData(obj as! NSData) as! Array<Music>
+        guard let obj = self.defaults.objectForKey(self.MUSIC_KEY) else {
+            return nil
         }
-        return nil
+        return NSKeyedUnarchiver.unarchiveObjectWithData(obj as! NSData) as! Array<Music>
     }
     
     func downloadMusic(music: Music,

@@ -29,8 +29,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -40,20 +39,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BasicCell")
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("BasicCell") else {
+            return UITableViewCell.init()
+        }
         let music = self.musics[indexPath.row]
-        cell?.textLabel?.text = music.title
+        cell.textLabel?.text = music.title
         let detail = (music.cached != nil && music.cached != false)  ? "Paly" : "Download"
-        cell?.detailTextLabel?.text = detail
-        return cell!
+        cell.detailTextLabel?.text = detail
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.selected = false
         if (!self.isDownloading) {
-            let music = self.musics[indexPath.row]
             self.isDownloading = true
+            let music = self.musics[indexPath.row]
             MusicManager.sharedInstance.downloadMusic(music, task: { (written, total, progress) -> Void in
                 let pro = String(format: "%.2f", progress * 100)
 //                print("Download : ", written, " - ", total, " - ", pro )

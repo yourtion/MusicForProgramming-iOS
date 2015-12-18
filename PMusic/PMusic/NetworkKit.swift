@@ -11,9 +11,14 @@ import Foundation
 class NetworkKit: NSObject {
     
     static func request(method: String, url: String, params: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>(), callback: (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void) {
-        let session = NSURLSession.sharedSession()
         
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        guard let url = NSURL(string: url) else {
+            print("Error: cannot create URL")
+            return
+        }
+        
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = method
         
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
