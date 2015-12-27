@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationItem.title = "MusicList"
+        
         MusicManager.sharedInstance.getList { (musicList) -> Void in
             print(musicList)
             self.musics = musicList
@@ -62,9 +65,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                     let str = written + "/" + total + "(" + pro + "%)"
                     cell?.detailTextLabel?.text = str
                 }
-                }, finish: { (file) -> Void in
-                    cell?.detailTextLabel?.text = "Play"
-                    print("Done")
+            }, finish: { (file) -> Void in
+                cell?.detailTextLabel?.text = "Play"
+                print("Done")
             })
         }
     }

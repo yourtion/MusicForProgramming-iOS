@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2970231C2F9FFF00581974 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2970221C2F9FFF00581974 /* PlayViewController.swift */; };
 		CB297EB51C09C6490048F08E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297EB41C09C6490048F08E /* AppDelegate.swift */; };
 		CB297EB71C09C6490048F08E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297EB61C09C6490048F08E /* ViewController.swift */; };
 		CB297EBA1C09C6490048F08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB297EB81C09C6490048F08E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB2970221C2F9FFF00581974 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		CB297EB11C09C6490048F08E /* PMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB297EB41C09C6490048F08E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB297EB61C09C6490048F08E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				CBF0D86B1C0BFDF80098111C /* Model */,
 				CB297EB41C09C6490048F08E /* AppDelegate.swift */,
 				CB297EB61C09C6490048F08E /* ViewController.swift */,
+				CB2970221C2F9FFF00581974 /* PlayViewController.swift */,
 				CB297EB81C09C6490048F08E /* Main.storyboard */,
 				CB297EBB1C09C6490048F08E /* Assets.xcassets */,
 				CB297EBD1C09C6490048F08E /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				CBBDCF641C101C4A0052AC9F /* NetworkKit.swift in Sources */,
 				CB297EB51C09C6490048F08E /* AppDelegate.swift in Sources */,
 				CB297ECE1C09E8450048F08E /* Music.swift in Sources */,
+				CB2970231C2F9FFF00581974 /* PlayViewController.swift in Sources */,
 				CBBDCF671C101E040052AC9F /* MusicManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
