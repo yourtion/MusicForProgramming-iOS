@@ -101,9 +101,36 @@
                     <view key="view" contentMode="scaleToFill" id="lH5-IS-vfN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7s-TX-53O">
+                                <rect key="frame" x="137" y="307" width="46" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseBtnAction:" destination="aHS-Ae-D0B" eventType="touchUpInside" id="JRN-1B-naa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-aJ-e0u">
+                                <rect key="frame" x="137" y="345" width="46" height="30"/>
+                                <state key="normal" title="Stop"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFE-il-eZA">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playBtnAction:" destination="aHS-Ae-D0B" eventType="touchUpInside" id="5ef-1U-YU4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Pause" destination="G7s-TX-53O" id="Ea4-hE-ulG"/>
+                        <outlet property="pauseBtn" destination="G7s-TX-53O" id="yAQ-Ks-KRI"/>
+                        <outlet property="playBtn" destination="LFE-il-eZA" id="UjS-4Y-ikG"/>
+                        <outlet property="stopBtn" destination="0Ls-aJ-e0u" id="Ne8-R5-Ady"/>
+                        <outlet property="stopBtnAction" destination="0Ls-aJ-e0u" id="CsX-iD-Vw8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ex5-gg-p7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
