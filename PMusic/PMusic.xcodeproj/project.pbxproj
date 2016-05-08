@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5CB18FE7147E22F5AB0213 /* Pods_PMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD91DE94F2CB319144BBABEA /* Pods_PMusic.framework */; };
 		CB2970231C2F9FFF00581974 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2970221C2F9FFF00581974 /* PlayViewController.swift */; };
 		CB297EB51C09C6490048F08E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297EB41C09C6490048F08E /* AppDelegate.swift */; };
 		CB297EB71C09C6490048F08E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297EB61C09C6490048F08E /* ViewController.swift */; };
 		CB297EBA1C09C6490048F08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB297EB81C09C6490048F08E /* Main.storyboard */; };
 		CB297EBC1C09C6490048F08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB297EBB1C09C6490048F08E /* Assets.xcassets */; };
 		CB297EBF1C09C6490048F08E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB297EBD1C09C6490048F08E /* LaunchScreen.storyboard */; };
-		CB297ECA1C09C85C0048F08E /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB297EC61C09C79A0048F08E /* SWXMLHash.framework */; };
-		CB297ECB1C09C85C0048F08E /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB297EC61C09C79A0048F08E /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB297ECE1C09E8450048F08E /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB297ECD1C09E8450048F08E /* Music.swift */; };
 		CBBDCF641C101C4A0052AC9F /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDCF631C101C4A0052AC9F /* NetworkKit.swift */; };
 		CBBDCF671C101E040052AC9F /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDCF661C101E040052AC9F /* MusicManager.swift */; };
@@ -27,7 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CB297ECB1C09C85C0048F08E /* SWXMLHash.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6CD97C6678919A737655FA65 /* Pods-PMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMusic/Pods-PMusic.release.xcconfig"; sourceTree = "<group>"; };
 		CB2970221C2F9FFF00581974 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		CB297EB11C09C6490048F08E /* PMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB297EB41C09C6490048F08E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,10 +42,11 @@
 		CB297EBB1C09C6490048F08E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB297EBE1C09C6490048F08E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB297EC01C09C6490048F08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB297EC61C09C79A0048F08E /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
 		CB297ECD1C09E8450048F08E /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		CBBDCF631C101C4A0052AC9F /* NetworkKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
 		CBBDCF661C101E040052AC9F /* MusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		DD91DE94F2CB319144BBABEA /* Pods_PMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED5A350D892ADDD26946173 /* Pods-PMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMusic/Pods-PMusic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,19 +54,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB297ECA1C09C85C0048F08E /* SWXMLHash.framework in Frameworks */,
+				4C5CB18FE7147E22F5AB0213 /* Pods_PMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85DA1AF3A90342F651F713D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FED5A350D892ADDD26946173 /* Pods-PMusic.debug.xcconfig */,
+				6CD97C6678919A737655FA65 /* Pods-PMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1AB44E8F612D8A75485F95A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD91DE94F2CB319144BBABEA /* Pods_PMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB297EA81C09C6490048F08E = {
 			isa = PBXGroup;
 			children = (
-				CB297EC61C09C79A0048F08E /* SWXMLHash.framework */,
 				CB297EB31C09C6490048F08E /* PMusic */,
 				CB297EB21C09C6490048F08E /* Products */,
+				85DA1AF3A90342F651F713D0 /* Pods */,
+				A1AB44E8F612D8A75485F95A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,10 +136,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB297EC31C09C6490048F08E /* Build configuration list for PBXNativeTarget "PMusic" */;
 			buildPhases = (
+				6F39CAA85E87B7CDF75CF1BC /* Check Pods Manifest.lock */,
 				CB297EAD1C09C6490048F08E /* Sources */,
 				CB297EAE1C09C6490048F08E /* Frameworks */,
 				CB297EAF1C09C6490048F08E /* Resources */,
 				CB297ECC1C09C85C0048F08E /* Embed Frameworks */,
+				D36386A30E5082DCB46013CD /* Embed Pods Frameworks */,
+				2CE4D1A11BA4C6F66A8BA45E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +198,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CE4D1A11BA4C6F66A8BA45E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMusic/Pods-PMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F39CAA85E87B7CDF75CF1BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D36386A30E5082DCB46013CD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMusic/Pods-PMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB297EAD1C09C6490048F08E /* Sources */ = {
@@ -297,6 +366,7 @@
 		};
 		CB297EC41C09C6490048F08E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED5A350D892ADDD26946173 /* Pods-PMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -312,6 +382,7 @@
 		};
 		CB297EC51C09C6490048F08E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD97C6678919A737655FA65 /* Pods-PMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

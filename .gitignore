@@ -32,3 +32,5 @@ DerivedData
 
 Carthage/Build
 PMusic/Carthage
+PMusic/Pods
+Podfile.lock
