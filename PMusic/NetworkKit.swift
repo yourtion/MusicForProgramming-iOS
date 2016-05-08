@@ -80,11 +80,11 @@ class DwonloadManager:NSObject, NSURLSessionDownloadDelegate {
             //下载结束
             print("下载结束")
             //输出下载文件原来的存放目录
-            print("location:\(location)")
+            print("location:\(location) == \(self.file)")
             let fileManager:NSFileManager = NSFileManager.defaultManager()
-            let filePath = self.file
+            
             do {
-                try fileManager.moveItemAtURL(location, toURL: filePath!)
+                try fileManager.copyItemAtURL(location.absoluteURL, toURL: self.file)
             } catch let error as NSError {
                 print("Error :", error.description)
                 return self.finishCallback(url: nil, file: nil)

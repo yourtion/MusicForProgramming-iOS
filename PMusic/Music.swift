@@ -16,7 +16,7 @@ class Music: NSObject, NSCoding {
     var cached : Bool!
     
     let fileManager = NSFileManager()
-    let cacheDirectory = NSURL.init(string: NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0] as String)
+    let cacheDirectory = NSURL.fileURLWithPath(NSSearchPathForDirectoriesInDomains(.CachesDirectory, .LocalDomainMask, true).first!)
     
     
     init(id: String, title: String, url:String) {
@@ -24,7 +24,7 @@ class Music: NSObject, NSCoding {
         self.title = title
         self.id = id
         self.url = NSURL.init(string: url)
-        self.path = cacheDirectory!.URLByAppendingPathComponent(self.url.lastPathComponent!)
+        self.path = cacheDirectory.URLByAppendingPathComponent(self.url.lastPathComponent!)
         self.cached = fileManager.fileExistsAtPath(path.path!)
     }
     

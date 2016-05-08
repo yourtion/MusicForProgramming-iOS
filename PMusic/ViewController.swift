@@ -49,6 +49,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = music.title
         let detail = (music.cached != nil && music.cached != false)  ? "Paly" : "Download"
         cell.detailTextLabel?.text = detail
+        
+        
+        print("\(music.path,music.url,music.cached) === \(NSFileManager().fileExistsAtPath(music.path.path!))")
         return cell
     }
     
